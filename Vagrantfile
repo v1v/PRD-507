@@ -2,6 +2,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "mwrock/Windows2016"
 
   config.vm.network "forwarded_port", guest: 8080, host: 18080
+  config.vm.network "forwarded_port", guest: 8888, host: 18888
   config.vm.guest = :windows
   config.vm.provider "virtualbox" do |vb|
      vb.gui = true
